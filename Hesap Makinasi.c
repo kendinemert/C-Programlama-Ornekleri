@@ -1,20 +1,19 @@
-#include <stdio.h>   //header tanimlamalari..
+#include <stdio.h>
 #include <stdlib.h>
 
-  /*Aybars ARSLAN switch case ile 4 islem yapan program*/
 
    int main()
    {
       int a,b,sonuc;
       char secim;
 
-      printf ("a sayisini giriniz = ");/*Birinci sayiyi giriyoruz*/
+      printf ("1.sayiyi giriniz: ");
       scanf ("%d",&a);
       fflush(stdin);
 
-     printf ("..islem seciniz[+ , - , * , /]..");/*secebilecegimiz islemleri gÃ¶steriyoruz*/
+     printf ("Islem seciniz: (+ , - , * , /) ");
      secim = getchar();
-     printf ("b sayisini giriniz.. ");
+     printf ("2. sayiyi giriniz: ");
      printf ("%d %c  ",a,secim);
      scanf("%d",&b);
 
@@ -22,30 +21,28 @@
       {
       case '+' :
           sonuc = a + b;
-          printf("Toplama isleminin sonucu %d'dir..",sonuc);
+          printf("Toplama isleminin sonucu = %d ",sonuc);
       break;
 
       case '-' :
           sonuc = a - b;
-          printf("Cikartma isleminin sonucu %d'dir..",sonuc);
+          printf("Cikartma isleminin sonucu = %d ",sonuc);
       break;
 
       case '*' :
           sonuc = a * b;
-          printf("Carpma isleminin sonucu %d'dir..",sonuc);
+          printf("Carpma isleminin sonucu = %d ",sonuc);
       break;
 
       case '/' :
           sonuc = a / b;
-          printf("Bolme isleminin sonucu %d'dir..",sonuc);
+          printf("Bolme isleminin sonucu = %d ",sonuc);
       break;
       default :
-      printf ("Lutfen belirtilen karakterlerden biriniz seciniz..");
+      printf ("Lutfen belirtilen karakterlerden biriniz seciniz. ");
       }
 
-     printf("icin enter tusuna basiniz..");
-
-      fflush(stdin);//system girdi parametlerinin bosaltilmasi..
-      getchar();//ekrandan deger girilene kadar beklenir..
+      fflush(stdin);
+      getchar();
       return 0;
   }
